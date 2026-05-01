@@ -2,7 +2,7 @@ import json
 from config import USE_MOCK
 
 #----------------------------MOCK DATA----------------------------#
-def build_invetory_mock():
+def build_inventory_mock():
     return {
         "subscription_id": "mock_subscription_id",
         "resource_groups": [
@@ -53,7 +53,7 @@ def build_inventory_azure(subscription_id):
 def main():
     if USE_MOCK:
         print("Running in MOCK mode")
-        inventory = build_invetory_mock()
+        inventory = build_inventory_mock()
     else:
         print("Running in Azure mode")
         inventory = build_inventory_azure("<subscription_id>")
