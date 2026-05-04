@@ -1,0 +1,19 @@
+{
+  "subscription_id": "mock_subscription_id",
+  "resource_groups": [
+    {
+      "name": "rg-demo",
+      "location": "eastus",
+      "resources": [
+        {
+          "name": "vm-01",
+          "type": "Microsoft.Compute/virtualMachines"
+        },
+        {
+          "name": "storage01",
+          "type": "Microsoft.Storage/storageAccounts"
+        }
+      ]
+    }
+  ]
+}
