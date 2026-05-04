@@ -25,6 +25,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run app in mock mode
+    -name: Check Python Syntax
+      run: |
+        python -m py_compile main.py
+
+    -name: Run app in mock mode
       run: |
         python main.py
