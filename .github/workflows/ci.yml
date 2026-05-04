@@ -29,6 +29,10 @@ jobs:
       run: |
         python -m py_compile main.py
 
+    -namme: Basic Test
+      run: |
+      python -c "import main; print('Test successful')"
+
     -name: Run app in mock mode
       run: |
         python main.py
