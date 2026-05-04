@@ -6,7 +6,7 @@ pr:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 variables:
   USE_MOCK: 'true'
