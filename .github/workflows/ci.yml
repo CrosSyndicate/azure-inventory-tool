@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      Use_MOCK: 'true'
+      USE_MOCK: 'true'
 
     steps:
     - name: Checkout Repo
