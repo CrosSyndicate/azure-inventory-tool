@@ -1,17 +1,34 @@
 trigger:
 - main
+- feature/setup
+
+pr:
+- main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'ubuntu-latest
+
+variables:
+  USE_MOCK: 'true'
 
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.0'
+    versionSpec: '3.11'
 
 - script: |
-    python -m venv venv
-    source venv/bin/activate
+    python -m pip install --upgrade pip
     pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- script: |
+    python -m py_compile main.py
+  displayName: 'Check Python Syntax'
+
+- script: |
+    python -c "import main; print('Test import successful')"
+  displayName: 'Basic Test'
+
+- script: |
     python main.py
-  displayName: ' Install dependencies and run app'
+  displayName: 'Run app in mock mode'
