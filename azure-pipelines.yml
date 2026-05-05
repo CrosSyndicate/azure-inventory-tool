@@ -32,3 +32,4 @@ steps:
 - script: |
     python main.py
   displayName: 'Run app in mock mode'
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
