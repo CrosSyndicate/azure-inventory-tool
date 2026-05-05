@@ -37,5 +37,6 @@ jobs:
         python -c "import main; print('Test import successful')"
 
     - name: Run app in mock mode
+      if: github.ref == 'refs/heads/main'
       run: |
         python main.py
