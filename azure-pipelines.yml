@@ -10,6 +10,8 @@ pool:
 
 variables:
   USE_MOCK: 'true'
+  DEMO_SECRET: $(DEMO_SECRET)
+  INVETORY_API_KEY: $(INVENTORY_API_KEY)
 
 steps:
 - task: UsePythonVersion@0
