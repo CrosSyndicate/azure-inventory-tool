@@ -1,5 +1,5 @@
 import json
-from config import USE_MOCK
+from config import USE_MOCK, DEMO_SECRET, INVENTORY_API_KEY
 
 #----------------------------MOCK DATA----------------------------#
 def build_inventory_mock():

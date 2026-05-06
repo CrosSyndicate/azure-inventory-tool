@@ -10,6 +10,8 @@ pool:
 
 variables:
   USE_MOCK: 'true'
+  DEMO_SECRET: $(DEMO_SECRET)
+  INVENTORY_API_KEY: $(INVENTORY_API_KEY)
 
 steps:
 - task: UsePythonVersion@0
@@ -32,3 +34,4 @@ steps:
 - script: |
     python main.py
   displayName: 'Run app in mock mode'
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
