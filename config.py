@@ -11,3 +11,7 @@ if USE_MOCK_VALUE is None:
     raise RuntimeError("USE_MOCK environment variable is required.")
 
 USE_MOCK = USE_MOCK_VALUE.lower() == "true"
+
+DEMO_SECRET = os.getenv("DEMO_SECRET")
+if DEMO_SECRET is None:
+    raise RuntimeError("DEMO_SECRET is missing")
