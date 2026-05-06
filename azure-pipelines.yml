@@ -10,6 +10,7 @@ pool:
 
 variables:
   USE_MOCK: 'true'
+  INVETORY_API_KEY: $(INVETORY_API_KEY)
 
 steps:
 - task: UsePythonVersion@0
