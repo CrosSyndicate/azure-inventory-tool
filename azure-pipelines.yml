@@ -10,6 +10,7 @@ pool:
 
 variables:
   USE_MOCK: 'true'
+  DEMO_SECRET: $(DEMO_SECRET)
   INVETORY_API_KEY: $(INVETORY_API_KEY)
 
 steps:
