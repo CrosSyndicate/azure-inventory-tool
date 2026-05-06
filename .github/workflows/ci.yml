@@ -13,6 +13,7 @@ jobs:
     
     env:
       USE_MOCK: 'true'
+      DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
 
     steps:
     - name: Checkout Repo
