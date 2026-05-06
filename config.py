@@ -16,6 +16,6 @@ DEMO_SECRET = os.getenv("DEMO_SECRET")
 if DEMO_SECRET is None:
     raise RuntimeError("DEMO_SECRET is missing")
 
-INVETORY_API_KEY = os.getenv("INVETORY_API_KEY")
-if INVETORY_API_KEY is None:
-    raise RuntimeError("INVETORY_API_KEY is missing")
+INVENTORY_API_KEY = os.getenv("INVENTORY_API_KEY")
+if INVENTORY_API_KEY is None:
+    raise RuntimeError("INVENTORY_API_KEY is missing")
