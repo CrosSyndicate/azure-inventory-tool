@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - feature/setup
+      - test/condition-check
 
 jobs:
   build:
