@@ -1,0 +1,20 @@
+name: Secret Migration Test
+
+on:
+  push:
+    branches:
+      - 'feature/*'
+
+jobs:
+  deploy-dev:
+    name: Simulate Databricks Secret Usage
+    runs-on: ubuntu-latest
+    environment: Development 
+        steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Use Masked Secret
+        run: |
+          echo "Connecting to Databricks..."
+          echo "Token: ${{ secrets.DATABRICKS_TOKEN }}"
