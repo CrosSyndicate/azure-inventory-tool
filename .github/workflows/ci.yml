@@ -16,6 +16,7 @@ jobs:
       USE_MOCK: 'true'
       DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
       INVENTORY_API_KEY: ${{ secrets.INVENTORY_API_KEY }}
+      DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
 
     steps:
     - name: Checkout Repo

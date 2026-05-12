@@ -12,6 +12,7 @@ variables:
   USE_MOCK: 'true'
   DEMO_SECRET: $(DEMO_SECRET)
   INVENTORY_API_KEY: $(INVENTORY_API_KEY)
+  DATABRICKS_TOKEN: $(DATABRICKS_TOKEN)
 
 steps:
 - task: UsePythonVersion@0
