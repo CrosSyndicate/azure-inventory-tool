@@ -10,7 +10,7 @@ jobs:
     name: Simulate Databricks Secret Usage
     runs-on: ubuntu-latest
     environment: Development 
-        steps:
+    steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
