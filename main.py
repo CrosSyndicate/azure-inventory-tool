@@ -1,6 +1,14 @@
 import json
+import os
 from config import USE_MOCK, DEMO_SECRET, INVENTORY_API_KEY
 
+# read secret from the pipeline
+token = os.getenv("DATABRICKS_TOKEN")
+
+if token:
+    print("Successfully retrieved token from environments!")
+else:
+    print("Token not found")
 #----------------------------MOCK DATA----------------------------#
 def build_inventory_mock():
     return {
