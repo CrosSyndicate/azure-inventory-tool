@@ -5,6 +5,12 @@ on:
     branches:
       - 'feature/*'
 
+env:
+  USE_MOCK: 'true'
+  DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
+  INVENTORY_API_KEY: ${{ secrets.INVENTORY_API_KEY }}
+  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+
 jobs:
   deploy-dev:
     name: Simulate Databricks Secret Usage
@@ -21,6 +27,3 @@ jobs:
 
       - name: Inject Secret Into Python
         run: python main.py
-        env:
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          USE_MOCK: 'true' #this tells the script to run in mock mode"
