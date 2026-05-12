@@ -18,7 +18,9 @@ jobs:
         run: |
           echo "Connecting to Databricks..."
           echo "Token: ${{ secrets.DATABRICKS_TOKEN }}"
+
       - name: Inject Secret Into Python
         run: python main.py
         env:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          USE_MOCK: 'true' #this tells the script to run in mock mode"
