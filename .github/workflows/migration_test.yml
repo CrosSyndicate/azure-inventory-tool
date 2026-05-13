@@ -27,3 +27,8 @@ jobs:
 
       - name: Inject Secret Into Python
         run: python main.py
+
+        uses: actions/upload-artifact@v4
+        with:
+          name: micgration-results
+          path: migration_report.txt

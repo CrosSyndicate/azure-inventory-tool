@@ -7,6 +7,13 @@ token = os.getenv("DATABRICKS_TOKEN")
 
 if token:
     print("Successfully retrieved token from environments!")
+    #create a simple report file
+    with open("migration_report.txt", "w") as f:
+        f.write("Migration Report\n")
+        f.write("================\n")
+        f.write(f"Demo Secret: {DEMO_SECRET}\n")
+        f.write(f"Inventory API Key: {INVENTORY_API_KEY}\n")
+        f.write(f"Databricks Token: {token[:3]}***\n")
 else:
     print("Token not found")
 #----------------------------MOCK DATA----------------------------#
